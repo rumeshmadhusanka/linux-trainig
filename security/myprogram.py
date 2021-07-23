@@ -12,3 +12,5 @@ try:
     print(hash_value.hex())
 except AssertionError:
     print("Incorrect number of arguments")
+except Exception:
+    print("Exception occurred")
