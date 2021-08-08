@@ -1,0 +1,98 @@
+========================ldap.conf==========================
+BASE    dc=Itacademy,dc=com
+URI     ldap://127.0.0.1 ldap://10.0.2.15
+
+
+=======================slapd.conf============================
+include		/etc/ldap/schema/core.schema
+include		/etc/ldap/schema/cosine.schema
+include		/etc/ldap/schema/inetorgperson.schema
+include		/etc/ldap/schema/nis.schema
+#include		/etc/ldap/schema/rfc822-MailMember.schema
+#include		/etc/ldap/schema/autofs.schema
+#include		/etc/ldap/schema/kerberosobject.schema
+
+serverID	001
+loglevel	16384
+
+modulepath	/usr/lib/ldap/
+moduleload	back_bdb.la
+moduleload	unique
+moduleload	auditlog
+moduleload	syncprov
+lastmod on
+
+pidfile	/var/run/slapd/slapd.pid
+argsfile	/var/run/slapd/slapd.args
+
+
+database bdb
+
+rootdn	"cn=admin,dc=Itacademy,dc=com"
+suffix	"dc=Itacademy,dc=com"
+
+directory "/var/lib/ldap"
+rootpw {SSHA}rD0AlYnQ1/40jV3R8J/q7muu3ajWUHt0
+
+overlay unique
+unique_base dc=Itacademy,dc=com
+unique_attributes mobile mail
+
+overlay auditlog
+auditlog /var/tmp/myaudit.ldif
+
+index entryCSN,entryUUID eq
+overlay syncprov
+syncprov-checkpoint 5 1
+syncprov-sessionlog 100
+
+#only after adding replicationuser
+access to dn.subtree="dc=Itacademy,dc=com"
+	by dn="uid=replicationuser,ou=System,dc=Itacademy,dc=com" read
+	
+
+
+=====================================================
+apt install ldap-utils
+slappasswd -h {SSHA}
+
+netstat -ntlp
+==================================================================================
+ldapadd -D "cn=admin,dc=Itacademy,dc=com" -h 127.0.0.1 -W -x -f rootDN.ldif
+
+dn: dc=Itacademy, dc=com 
+dc: Itacademy 
+o: Itacademy 
+objectclass: organization 
+objectclass: dcObject
+
+===================================================================================
+ldapadd -D "cn=admin,dc=Itacademy,dc=com" -h 127.0.0.1 -W -x -f directoryStructure.ldif
+
+
+dn: ou=books,dc=Itacademy,dc=com
+ou: books
+objectClass: organizationalUnit
+
+dn: ou=employees,dc=Itacademy,dc=com
+ou: employees
+objectClass: organizationalUnit
+
+dn: ou=System,dc=Itacademy,dc=com
+ou: System
+objectClass: organizationalUnit
+
+======================================================================
+ldapadd -D "cn=admin,dc=Itacademy,dc=com" -h 127.0.0.1 -w'123' -x -f syncRepl.ldif 
+
+
+dn: uid=replicationuser,ou=System,dc=Itacademy,dc=com
+uid: replicationuser
+ou: System
+userPassword: {SSHA}/G/d0eLSqEzJfdvplt0oNmUC6tQljyVb
+description: Special account for SyncRepl.
+objectClass: account
+objectClass: simpleSecurityObject
+
+
+
