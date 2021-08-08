@@ -1,0 +1,384 @@
+dn: mail=owen.hudson@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Owen
+sn: Hudson
+mail: hello@gmail.coowen.hudson@lt.com
+mobile: 94771111111
+homePhone: 940112820001
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=rachel.burgess@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Rachel
+sn: Burgess
+mail: hello@gmail.corachel.burgess@lt.com
+mobile: 94771111112
+homePhone: 940112820002
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=mary.mathis@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Mary
+sn: Mathis
+mail: hello@gmail.comary.mathis@lt.com
+mobile: 94771111113
+homePhone: 940112820003
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=molly.vaughan@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Molly
+sn: Vaughan
+mail: hello@gmail.comolly.vaughan@lt.com
+mobile: 94771111114
+homePhone: 940112820004
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=piers.duncan@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Piers
+sn: Duncan
+mail: hello@gmail.copiers.duncan@lt.com
+mobile: 94771111115
+homePhone: 940112820005
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=dorothy.wallace@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Dorothy
+sn: Wallace
+mail: hello@gmail.codorothy.wallace@lt.com
+mobile: 94771111116
+homePhone: 940112820006
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=emma.clark@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Emma
+sn: Clark
+mail: hello@gmail.coemma.clark@lt.com
+mobile: 94771111117
+homePhone: 940112820007
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=tracey.mills@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Tracey
+sn: Mills
+mail: hello@gmail.cotracey.mills@lt.com
+mobile: 94771111118
+homePhone: 940112820008
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=dorothy.wilkins@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Dorothy
+sn: Wilkins
+mail: hello@gmail.codorothy.wilkins@lt.com
+mobile: 94771111119
+homePhone: 940112820009
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=ava.lambert@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Ava
+sn: Lambert
+mail: hello@gmail.coava.lambert@lt.com
+mobile: 94771111120
+homePhone: 940112820010
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=wanda.kelly@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Wanda
+sn: Kelly
+mail: hello@gmail.cowanda.kelly@lt.com
+mobile: 94771111121
+homePhone: 940112820011
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=blake.mills@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Blake
+sn: Mills
+mail: hello@gmail.coblake.mills@lt.com
+mobile: 94771111122
+homePhone: 940112820012
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=gordon.simpson@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Gordon
+sn: Simpson
+mail: hello@gmail.cogordon.simpson@lt.com
+mobile: 94771111123
+homePhone: 940112820013
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=carl.manning@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Carl
+sn: Manning
+mail: hello@gmail.cocarl.manning@lt.com
+mobile: 94771111124
+homePhone: 940112820014
+employeeType: permanent
+localityName: London
+objectClass: inetOrgPerson
+
+dn: mail=grace.lee@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Grace
+sn: Lee
+mail: hello@gmail.cograce.lee@lt.com
+mobile: 94771111125
+homePhone: 940112820015
+employeeType: permanent
+localityName: Berlin
+objectClass: inetOrgPerson
+
+dn: mail=andrew.oliver@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Andrew
+sn: Oliver
+mail: hello@gmail.coandrew.oliver@lt.com
+mobile: 94771111126
+homePhone: 940112820016
+employeeType: permanent
+localityName: Berlin
+objectClass: inetOrgPerson
+
+dn: mail=gabrielle.fisher@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Gabrielle
+sn: Fisher
+mail: hello@gmail.cogabrielle.fisher@lt.com
+mobile: 94771111127
+homePhone: 940112820017
+employeeType: permanent
+localityName: Berlin
+objectClass: inetOrgPerson
+
+dn: mail=sean.parr@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Sean
+sn: Parr
+mail: hello@gmail.cosean.parr@lt.com
+mobile: 94771111145
+homePhone: 940112820035
+employeeType: contractor
+localityName: Johannesburg
+objectClass: inetOrgPerson
+
+dn: mail=warren.ferguson@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Warren
+sn: Ferguson
+mail: hello@gmail.cowarren.ferguson@lt.com
+mobile: 94771111146
+homePhone: 940112820036
+employeeType: contractor
+localityName: Johannesburg
+objectClass: inetOrgPerson
+
+dn: mail=gabrielle.vaughan@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Gabrielle
+sn: Vaughan
+mail: hello@gmail.cogabrielle.vaughan@lt.com
+mobile: 94771111147
+homePhone: 940112820037
+employeeType: contractor
+localityName: Colombo
+objectClass: inetOrgPerson
+
+dn: mail=wendy.davidson@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Wendy
+sn: Davidson
+mail: hello@gmail.cowendy.davidson@lt.com
+mobile: 94771111148
+homePhone: 940112820038
+employeeType: contractor
+localityName: Colombo
+objectClass: inetOrgPerson
+
+dn: mail=alison.hart@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Alison
+sn: Hart
+mail: hello@gmail.coalison.hart@lt.com
+mobile: 94771111149
+homePhone: 940112820039
+employeeType: contractor
+localityName: Colombo
+objectClass: inetOrgPerson
+
+dn: mail=jane.forsyth@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Jane
+sn: Forsyth
+mail: hello@gmail.cojane.forsyth@lt.com
+mobile: 94771111150
+homePhone: 940112820040
+employeeType: contractor
+localityName: New York
+objectClass: inetOrgPerson
+
+dn: mail=ella.allan@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Ella
+sn: Allan
+mail: hello@gmail.coella.allan@lt.com
+mobile: 94771111151
+homePhone: 940112820041
+employeeType: contractor
+localityName: New York
+objectClass: inetOrgPerson
+
+dn: mail=paul.black@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Paul
+sn: Black
+mail: hello@gmail.copaul.black@lt.com
+mobile: 94771111152
+homePhone: 940112820042
+employeeType: contractor
+localityName: New York
+objectClass: inetOrgPerson
+
+dn: mail=natalie.greene@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Natalie
+sn: Greene
+mail: hello@gmail.conatalie.greene@lt.com
+mobile: 94771111153
+homePhone: 940112820043
+employeeType: contractor
+localityName: Moscow
+objectClass: inetOrgPerson
+
+dn: mail=sophie.king@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Sophie
+sn: King
+mail: hello@gmail.cosophie.king@lt.com
+mobile: 94771111154
+homePhone: 940112820044
+employeeType: contractor
+localityName: Moscow
+objectClass: inetOrgPerson
+
+dn: mail=james.scott@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: James
+sn: Scott
+mail: hello@gmail.cojames.scott@lt.com
+mobile: 94771111155
+homePhone: 940112820045
+employeeType: contractor
+localityName: Moscow
+objectClass: inetOrgPerson
+
+dn: mail=jane.brown@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Jane
+sn: Brown
+mail: hello@gmail.cojane.brown@lt.com
+mobile: 94771111156
+homePhone: 940112820046
+employeeType: contractor
+localityName: Moscow
+objectClass: inetOrgPerson
+
+dn: mail=kevin.rees@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Kevin
+sn: Rees
+mail: hello@gmail.cokevin.rees@lt.com
+mobile: 94771111157
+homePhone: 940112820047
+employeeType: contractor
+localityName: Moscow
+objectClass: inetOrgPerson
+
+dn: mail=brandon.macdonald@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Brandon
+sn: MacDonald
+mail: hello@gmail.cobrandon.macdonald@lt.com
+mobile: 94771111158
+homePhone: 940112820048
+employeeType: contractor
+localityName: Amsterdam
+objectClass: inetOrgPerson
+
+dn: mail=olivia.gill@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Olivia
+sn: Gill
+mail: hello@gmail.coolivia.gill@lt.com
+mobile: 94771111159
+homePhone: 940112820049
+employeeType: contractor
+localityName: Amsterdam
+objectClass: inetOrgPerson
+
+dn: mail=lisa.mclean@lt.com,ou=employees,dc=Itacademy,dc=com
+cn: Lisa
+sn: McLean
+mail: hello@gmail.colisa.mclean@lt.com
+mobile: 94771111160
+homePhone: 940112820050
+employeeType: contractor
+localityName: Amsterdam
+objectClass: inetOrgPerson
+
+
+dn: documentIdentifier=1001,ou=books,dc=Itacademy,dc=com
+documentTitle: Data Smart
+documentIdentifier: 1001
+documentPublisher: Wiley
+objectClass: document
+
+dn: documentIdentifier=1002,ou=books,dc=Itacademy,dc=com
+documentTitle: God Created the Integers
+documentIdentifier: 1002
+documentPublisher: Penguin
+objectClass: document
+
+dn: documentIdentifier=1003,ou=books,dc=Itacademy,dc=com
+documentTitle: Superfreakonomics
+documentIdentifier: 1003
+documentPublisher: HarperCollins
+objectClass: document
+
+dn: documentIdentifier=1004,ou=books,dc=Itacademy,dc=com
+documentTitle: Orientalism
+documentIdentifier: 1004
+documentPublisher: Penguin
+objectClass: document
+
+dn: documentIdentifier=1005,ou=books,dc=Itacademy,dc=com
+documentTitle: Nature of Statistical Learning Theory, The
+documentIdentifier: 1005
+documentPublisher: Springer
+objectClass: document
+
+dn: documentIdentifier=1006,ou=books,dc=Itacademy,dc=com
+documentTitle: Integration of the Indian States
+documentIdentifier: 1006
+documentPublisher: Orient Blackswan
+objectClass: document
+
+dn: documentIdentifier=1007,ou=books,dc=Itacademy,dc=com
+documentTitle: Drunkard's Walk, The
+documentIdentifier: 1007
+documentPublisher: Penguin
+objectClass: document
+
+dn: documentIdentifier=1008,ou=books,dc=Itacademy,dc=com
+documentTitle: Image Processing & Mathematical Morphology
+documentIdentifier: 1008
+documentPublisher: CRC
+objectClass: document
+
+dn: documentIdentifier=1009,ou=books,dc=Itacademy,dc=com
+documentTitle: How to Think Like Sherlock Holmes
+documentIdentifier: 1009
+documentPublisher: CRC
+objectClass: document
