@@ -52,18 +52,20 @@ access to dn.subtree="dc=Itacademy,dc=com"
 	
 
 
-=====================================================
+=============DEBUGGING commands========================================
+
 apt install ldap-utils
 slappasswd -h {SSHA}
-
 netstat -ntlp
+slaptest -v -f /etc/ldap/slapd.conf
+slapd -d sync
 ==================================================================================
 ldapadd -D "cn=admin,dc=Itacademy,dc=com" -h 127.0.0.1 -W -x -f rootDN.ldif
 
-dn: dc=Itacademy, dc=com 
-dc: Itacademy 
-o: Itacademy 
-objectclass: organization 
+dn: dc=Itacademy, dc=com
+dc: Itacademy
+o: Itacademy
+objectclass: organization
 objectclass: dcObject
 
 ===================================================================================
@@ -71,7 +73,7 @@ ldapadd -D "cn=admin,dc=Itacademy,dc=com" -h 127.0.0.1 -W -x -f directoryStructu
 
 
 dn: ou=books,dc=Itacademy,dc=com
-ou: books
+ou: booksnano dir/ldif
 objectClass: organizationalUnit
 
 dn: ou=employees,dc=Itacademy,dc=com
@@ -89,7 +91,7 @@ ldapadd -D "cn=admin,dc=Itacademy,dc=com" -h 127.0.0.1 -w'123' -x -f syncRepl.ld
 dn: uid=replicationuser,ou=System,dc=Itacademy,dc=com
 uid: replicationuser
 ou: System
-userPassword: {SSHA}/G/d0eLSqEzJfdvplt0oNmUC6tQljyVb
+userPassword: 123
 description: Special account for SyncRepl.
 objectClass: account
 objectClass: simpleSecurityObject
