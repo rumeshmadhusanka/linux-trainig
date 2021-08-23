@@ -1,0 +1,81 @@
+dn: dc=wso2demo,dc=com
+objectClass: dcObject
+objectClass: organization
+objectClass: top
+dc: wso2demo
+o: wso2demo.com
+
+dn: cn=admin,dc=wso2demo,dc=com
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword:: e1NTSEF9K2FtVmkxRGcvSHB1K0o5eVdaZ2k5VHdyYkdZRDZVR3g=
+description: LDAP administrator
+
+dn: ou=staff,dc=wso2demo,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: staff
+
+dn: ou=groups,ou=staff,dc=wso2demo,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: uid=user01,ou=staff,dc=wso2demo,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Demo User01
+sn: User 01
+mail: user01@wso2demo.com
+uid: user01
+userPassword:: MTIz
+
+dn: cn=eng,ou=groups,ou=staff,dc=wso2demo,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: eng
+member: uid=user01,ou=staff,dc=wso2demo,dc=com
+member: uid=user02,ou=staff,dc=wso2demo,dc=com
+
+dn: uid=user02,ou=staff,dc=wso2demo,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Demo User02
+sn: User 02
+mail: user02@wso2demo.com
+uid: user02
+userPassword:: MTIz
+
+dn: uid=user03,ou=staff,dc=wso2demo,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Demo User03
+sn: User 03
+mail: user03@wso2demo.com
+uid: user03
+userPassword:: MTIz
+
+dn: uid=user04,ou=staff,dc=wso2demo,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Demo User04
+sn: User 04
+mail: user04@wso2demo.com
+uid: user04
+userPassword:: MTIz
+
+dn: cn=sales,ou=groups,ou=staff,dc=wso2demo,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: sales
+member: uid=user03,ou=staff,dc=wso2demo,dc=com
+member: uid=user04,ou=staff,dc=wso2demo,dc=com
