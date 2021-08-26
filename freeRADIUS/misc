@@ -1,0 +1,93 @@
+Set hostname LDAP machine
+hostnamectl set-hostname demo-openldap.wso2demo.com
+Also in /etc/hosts
+10.128.0.11	demo-openldap.wso2demo.com
+LDAP data
+https://github.com/rumeshmadhusanka/linux-trainig/blob/main/freeRADIUS/wso2demo.ldif
+Add to ldap
+ldapadd -x -D cn=admin,dc=wso2demo,dc=com -W -f structure.ldif 
+
+
+Uncomment bob on users file on /etc/freeradius/3.0/users
+Create a client on /etc/freeradius/3.0/clients.conf
+client demo-client {
+	ipaddr = 10.128.0.10
+	secret = 123
+}
+
+Add temporary ip address
+ip link set dev enp0s8 down
+ip addr add 192.168.56.15/24 dev enp0s8
+ip link set dev enp0s8 up
+
+Check whether freeradius is working
+radtest bob 123 10.128.0.12  10 123
+
+Create a symlink from modes-available/ldap to mods-enabled
+ln -s ../mods-available/ldap .
+
+
+base_dn = "ou=staff,dc=wso2demo,dc=com"
+
+DEFAULT Ldap-Group == "ou=staff,dc=wso2demo,dc=com"
+        Reply-Message = "You are Accepted"
+
+DEFAULT Auth-Type := Reject
+
+
+Auth-Type PAP {
+		pap
+		if (&Google-Password) {
+                        update request {
+				&User-Name := "%{&User-UUID}"
+                               &User-Password := "%{&Google-Password}"
+                        }
+                        pam
+                } else {
+                       update reply {
+                              # State := "%{randstr:aaaaaaaaaaaaaaaa}"
+                              Reply-Message := "Login incorrect: TOTP Fail"
+			}
+                        reject
+                }
+	}
+
+
+
+
+/etc/freeradius/3.0/policy.d/filter
+
+filter_uuid {
+        if (&User-Name =~ /^(.*)@wso2demo\.com$/) {
+                update request {
+                        &User-UUID := "%{1}"
+                }
+        }
+}
+
+filter_google_otp {
+        if (&User-Password =~ /^(.*)([0-9]{6})$/) {
+               update request {
+                        &Google-Password := "%{2}"
+                        &User-Password := "%{1}"
+                }
+        }
+}
+
+
+
+
+#Command Syntax
+radtest <username> <password+google authenticator TOTP> localhost 1812 <RADIUS secret key>
+
+#Example:
+radtest user02@wso2demo.com password307255 10.128.0.12  10 123
+
+Create linux user 
+adduser user01@wso2demo.com --force-badname
+
+
+tail /var/log/auth.log
+
+nano /etc/pam.d/radiusd 
+auth requisite pam_google_authenticator.so forward_pass
