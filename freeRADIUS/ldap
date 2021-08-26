@@ -196,8 +196,8 @@ ldap {
 		#  For Active Directory, you should use
 		#  "samaccountname=" instead of "uid="
 		#
-		filter = "(uid=%{%{Stripped-User-Name}:-%{User-Name}})"
-#		filter ="(mail=%{%{Stripped-User-Name}:-%{User-Name}})"
+#		filter = "(uid=%{%{Stripped-User-Name}:-%{User-Name}})"
+		filter ="(mail=%{%{Stripped-User-Name}:-%{User-Name}})"
 		#  SASL parameters to use for user binds
 		#
 		#  When we're prompted by the SASL library, these control
