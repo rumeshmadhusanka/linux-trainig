@@ -1,0 +1,30 @@
+hping3 192.168.56.107 --icmp --flood --spoof 192.168.56.106
+hping3 192.168.56.107 -S -p 80 --flood --spoof 192.168.56.106
+
+tcpdump -nni enp0s3 icmp
+tcpdump -nni enp0s3 port 80
+
+netstat | grep SYN_RECV | wc -l
+
+
+iptables -L
+iptables -I INPUT 0 -p tcp --syn -j DROP
+iptables -L INPUT
+iptables -D INPUT 
+
+iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
+
+# iptables -A INPUT -p tcp -m state --state NEW -m recent --update --seconds 60 --hitcount 20 -j DROP
+# iptables -A INPUT -p tcp -m state --state NEW -m recent --set -j ACCEPT
+
+
+
+curl http://192.168.56.107:80 --silent -o /dev/null -w '%{response_code}\n'
+curl http://192.168.56.107:80 --silent -o /dev/null -v
+
+
+sudoers:
+https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
+
+Chroot jail
+https://deepsec.net/docs/Slides/2015/Chw00t_How_To_Break%20Out_from_Various_Chroot_Solutions_-_Bucsay_Balazs.pdf
