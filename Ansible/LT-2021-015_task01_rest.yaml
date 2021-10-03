@@ -21,20 +21,20 @@
         force: true
       notify: restart apache2
 
-    - name: Allow the service from firewall
-      firewalld:
-        service: apache2
-        permanent: true
-        state: enabled
-        immediate: yes
-      notify: restart ufw
+#     - name: Allow the service from firewall
+#       firewalld:
+#         service: apache2
+#         permanent: true
+#         state: enabled
+#         immediate: yes
+#       notify: restart ufw
 
   handlers:
     - name: restart apache2
       service:
         name: apache2
         state: restarted
-    - name: restart ufw
-      service:
-        name: ufw
-        state: restarted
+#     - name: restart ufw
+#       service:
+#         name: ufw
+#         state: restarted
