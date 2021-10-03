@@ -1,0 +1,40 @@
+- name: Install apache2 and configure
+  gather_facts: true
+  hosts:
+    - gcp
+  tasks:
+    - name: install apache2
+      apt:
+        name: apache2
+        update_cache: yes
+        state: latest
+
+    - name: enable mod_rewrite
+      apache2_module:
+        name: rewrite
+        state: present
+
+    - name: Jinja 2 to index.html
+      template:
+        src: index.j2
+        dest: /var/www/html/index.html
+        force: true
+      notify: restart apache2
+
+    - name: Allow the service from firewall
+      firewalld:
+        service: apache2
+        permanent: true
+        state: enabled
+        immediate: yes
+      notify: restart ufw
+
+  handlers:
+    - name: restart apache2
+      service:
+        name: apache2
+        state: restarted
+    - name: restart ufw
+      service:
+        name: ufw
+        state: restarted
