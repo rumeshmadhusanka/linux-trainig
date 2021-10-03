@@ -1,0 +1,18 @@
+- name: update
+  hosts:
+    - gcp
+  tasks:
+    - name: upgrade apt packages
+      apt:
+        update_cache: true
+        upgrade: full
+
+    - name: check if reboot is required
+      stat:
+        path: /var/run/reboot-required get_md5=no
+      register: reboot_req
+
+    - name: restart the instance
+      reboot:
+        connect_timeout: 300
+      when: reboot_req.stat.exists == true
