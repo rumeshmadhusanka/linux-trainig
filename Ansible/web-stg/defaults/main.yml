@@ -1,0 +1,8 @@
+---
+# defaults file for web-stg
+inventory = inventory.ini
+ask_pass = false
+host_key_checking = false
+private_key_file=ssh
+enable_plugins=gcp_compute
+remote_user = rumesh-cloud

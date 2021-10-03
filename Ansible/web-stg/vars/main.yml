@@ -1,0 +1,10 @@
+---
+# vars file for web-stg
+gcp_project: "79517034944"
+gcp_cred_kind: "serviceaccount"
+gcp_cred_file: "linux-devops-3000-b420b44fd512.json"
+gcp_region: "us-central1"
+gcp_zone: "us-central1-a"
+disk_size: 30
+image: "projects/ubuntu-os-cloud/global/images/family/ubuntu-2004-lts"
+envi: "staging"
